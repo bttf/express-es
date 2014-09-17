@@ -2,13 +2,6 @@ var express = require('express');
 var router = express.Router();
 var article = require('../models/article');
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.json({
-    message: 'hey, you made it. great job shithead'
-  });
-});
-
 router.get('/articles', function(req, res) {
   article.fetchAll().then(
     function (data) {
@@ -53,4 +46,3 @@ router.delete('/articles/:id', function(req, res) {
 });
 
 module.exports = router;
-

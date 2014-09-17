@@ -1,8 +1,9 @@
+var config = require('../lib/config');
 var esClient = require('../lib/esClient');
 var article = {};
 
-var index = 'ac',
-    type = 'article';
+var index = config.article_index,
+    type = config.article_type;
 
 article.fetch = function(id) {
   return esClient.get({
