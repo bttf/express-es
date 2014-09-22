@@ -11,8 +11,9 @@ article.fetch = function(id) {
     type: type,
     id: id
   }).then(function(body) {
-    var article = body._source;
-    article.id = body._id;
+    var article = {};
+    article["article"] = body._source;
+    article.article.id = body._id;
     return article;
   });
 };
