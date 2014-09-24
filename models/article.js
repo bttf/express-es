@@ -57,7 +57,7 @@ article.update = function(id, data) {
     type: type,
     id: id,
     body: {
-      doc: data
+      doc: data.article
     }
   });
 };
